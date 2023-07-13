@@ -12,5 +12,7 @@ vi. Branches:
     e) Whenever a new branch is created it will already hold the contnet that master branch has.
     f) It is upto the owner to accept and merge the pull request or suggest further changes in the code and decline it. 
     g) generating a pull request can be termed as a push and accepting/ merging the pull request can be termed as pull. It is called a pull request because the contributer requests the owner to review the changes and pull them to master branch.
-    h) when new changes are made in the side branches compare the side branch with the master branch (deletion case) before generating pull request.
-
+    h) when new changes are made in the side branches compare the side branch with the master branch before generating pull request.
+    i) The side branches do not get updated with the current codebase of master branch for that a pull request is generated from main branch to side branch to get the upodated version. Here master branch is compared with the side branch.
+    j) Generally there are no conflicts and it shows 'able to automatically merge'. But when there are conflicts such as changes are made on the same line of code and commited in the master branch and the side branch and then side branch generates pull request then it shows 'Not able tio merge automatically'.
+    k) If more than 1 side branches commit for the change in same line of code then it is upto owner which to merge in master branch and which to decline. Owner is notified about the conflict and then he has to manually resolve the conflict by comparing the changes of both which is shown on the same page. Applicable for j) as well. 

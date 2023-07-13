@@ -4,3 +4,11 @@ ii. commit: saving
 iii. fork: copy everything from that folder/repository
 iv. github issues: complaints
 v. Every file you open will have a history on the top right which can be usede to check what changes were made during what time period. Note that history shows commits which creates checkpoints that can be used to refer what was done when.
+vi. Branches: 
+    a) Master is the made codebase. All the changes are ultimately reflected in the master branch.
+    b) Other branches use master branch codebase and work further. The changes are first saved to that branch and merged with master branch by the owner of the repository after viewing the commits from other side branches.
+    c) This concept ensures that while multiple contributors are working on a project the main error free code resides on master branch and every contributor has their own branch which they can work on to work on the code further. Otherwise it would create a lot of chaos and errors.
+    d) changes or new commits made in side branches will not be reflected in master branch until commits are merged by the owner. Merging can be done when the side branch contributor creates a pull request.
+    e) Whenever a new branch is created it will already hold the contnet that master branch has.
+
+

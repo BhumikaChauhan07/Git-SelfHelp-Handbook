@@ -12,5 +12,5 @@ vi. Branches:
     e) Whenever a new branch is created it will already hold the contnet that master branch has.
     f) It is upto the owner to accept and merge the pull request or suggest further changes in the code and decline it. 
     g) generating a pull request can be termed as a push and accepting/ merging the pull request can be termed as pull. It is called a pull request because the contributer requests the owner to review the changes and pull them to master branch.
-
+    h) when new changes are made in the side branches compare the side branch with the master branch (deletion case) before generating pull request.
 

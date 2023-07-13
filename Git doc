@@ -1,5 +1,6 @@
 A self created git documentation for self understanding!
-repository: folder
-commit: saving
-fork: copy everything from that folder/repository
-github issues: complaints
+i. repository: folder
+ii. commit: saving
+iii. fork: copy everything from that folder/repository
+iv. github issues: complaints
+v. Every file you open will have a history on the top right which can be usede to check what changes were made during what time period. Note that history shows commits which creates checkpoints that can be used to refer what was done when.

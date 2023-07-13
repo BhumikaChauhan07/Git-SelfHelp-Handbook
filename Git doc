@@ -10,5 +10,7 @@ vi. Branches:
     c) This concept ensures that while multiple contributors are working on a project the main error free code resides on master branch and every contributor has their own branch which they can work on to work on the code further. Otherwise it would create a lot of chaos and errors.
     d) changes or new commits made in side branches will not be reflected in master branch until commits are merged by the owner. Merging can be done when the side branch contributor creates a pull request.
     e) Whenever a new branch is created it will already hold the contnet that master branch has.
+    f) It is upto the owner to accept and merge the pull request or suggest further changes in the code and decline it. 
+    g) generating a pull request can be termed as a push and accepting/ merging the pull request can be termed as pull. It is called a pull request because the contributer requests the owner to review the changes and pull them to master branch.
 
 

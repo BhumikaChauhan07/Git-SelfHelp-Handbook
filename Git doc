@@ -1,10 +1,25 @@
-A self created git documentation for self understanding!
-i. repository: folder
-ii. commit: saving
-iii. fork: copy everything from that folder/repository
-iv. github issues: complaints
-v. Every file you open will have a history on the top right which can be usede to check what changes were made during what time period. Note that history shows commits which creates checkpoints that can be used to refer what was done when.
-vi. Branches: 
+----------------------------------------------------------
+ A self created git documentation for self understanding!
+----------------------------------------------------------
+
+Git - Git is a software that provides version control and keeps tracks of files and folders along with provision of several functionalities to do so. 
+      This makes it easy to create checkpoints to save changes and review the project/files/folders at how it was like on a particular checkpoint.
+      The operations can be performed through commands on terminal only and there isn't any GUI to innteract with or a constant view of files/folders.
+      It assists Github to connect the local folders to their github repositories ultimately from where it can be made visible to others. So one can work locally and track the work through git and then reflect it in github repository.
+    
+Github - It is a website that provides same functionalities like git but along with that one can search others' repositories for collaborative work.
+         It is the platform where the shareable and visible(to others and self) repositories are created and tracked. 
+         It can be thought of as social platform for posting local work that can be made private or public.
+         Its base functionalities are that of git so git still needs to be installed in your system to work in the website.
+         It is a great tool for collaborative project contributions and open-source contributions. One can search for users and their repositories, find projects, content and create a community for collaborative working.
+
+UNDERSTANDING GITHUB!
+(i) Repository: folder
+(ii) Commit: saving
+(iii) Fork: copy everything from that folder/repository
+(iv) Github issues: complaints
+(v) Every file you open will have a history on the top right which can be usede to check what changes were made during what time period. Note that history shows commits which creates checkpoints that can be used to refer what was done when.
+(vi) Branches: 
     a) Master is the made codebase. All the changes are ultimately reflected in the master branch.
     b) Other branches use master branch codebase and work further. The changes are first saved to that branch and merged with master branch by the owner of the repository after viewing the commits from other side branches.
     c) This concept ensures that while multiple contributors are working on a project the main error free code resides on master branch and every contributor has their own branch which they can work on to work on the code further. Otherwise it would create a lot of chaos and errors.
@@ -16,4 +31,70 @@ vi. Branches:
     i) The side branches do not get updated with the current codebase of master branch for that a pull request is generated from main branch to side branch to get the upodated version. Here master branch is compared with the side branch.
     j) Generally there are no conflicts and it shows 'able to automatically merge'. But when there are conflicts such as changes are made on the same line of code and commited in the master branch and the side branch and then side branch generates pull request then it shows 'Not able tio merge automatically'.
     k) If more than 1 side branches commit for the change in same line of code then it is upto owner which to merge in master branch and which to decline. Owner is notified about the conflict and then he has to manually resolve the conflict by comparing the changes of both which is shown on the same page. Once the conflict is resolved the resolution is saved in sidebranch and then the pull request from side branch is accepted. Applicable for j) as well. 
-vii. Fork:
+(vii) Fork: Other acoounts on github can copy the repository to their account by forking and start contributing in that respository
+(viii) Issues: If  while contributing one finds some problem in main repo then an issue can be raised by describing the problem and the the owner then can comment and close the issue upon being resolved.
+(ix) Remember that when you are creating directories or files in github, those are github directories and fileas and are present on github. They are not locally present anywhere in your system. In order to work upon them locally, they need to brought to system by cloning the github repository and then keeping track and reflecting back in github using git. 
+(x) Commits basically denotes checkpoints that can be used to visit how the project/ file looked at that particular state. 
+    Each commit has its own hash code which is built using the hashcode of previous commit. So list of commits can be thought of as a stack of commits with the latest commit at the top.
+    If we want do delete a commit in between then all the commits above it (or commits made after that commit) will also be deleted.
+(xi) To download the repo on local system one can open that repository (cloning), go to code and download zip file or the other way is through command line which is describrd in (vi) in the UNDERSTANDING GIT section. 
+
+UNDERSTANDING GIT!
+(i) Git initialization - This process involves informing git about which user we are by providing username and email through the following commands in bash:
+                         git config --global "Username"
+                         git config --global "E-mail"
+                         this is configuring(config) git by telling git that on this system(--global) the user  of git is Username with E-mail as email id
+    This is required only once at the start not to be done always. 
+(ii) When one creates a new repo and doen't initialize with readme on github, then github shows certain commnands in the newly created repo to create a readme file using terminal, uploading a file/folder in github or initializing it commiting changes and pushing on master branch
+(iii) Git processes (Understanding the working behind everything we do on git and github):
+        1. Git initialization -This initiates git process. Whenever we want to start tracking of files/folders so that we can upload a local folder(say code) of our system on github, we need to inform the system that git is accesiible in that folder or that git can access it and that git commands can be used in the folder. That can be done by opening that foder in cmd and then typing the following command:
+                                git init
+           This will create a hidden folder in the local folder code by the name .git (. signifies hidden folder) ad\nd now git commands can be operated in this folder after initializing git. 
+        2. Areas:
+            a) working area- Folder and files that are not currenlty being tracked by git (althought git is initialised in folder code, git will not automatically start tracking the other folders and files inside it, git had to be informed to start tracking particular folders or files)
+            b) Tracked area- Folders and files that are being tracked by git. Tracking files is important for git as through this the history will be maintained.
+            c) staging area- collection of files and folders out of the tracked ones that are selected for saving any changes(ommitting) made to them.
+            d) git directory- The directory on github where all the committed or saved changes will be reflected and the track record or history of commits will be available there.
+        3. Git status - It tells about the status of folder regarging what changes in folder are saved or not saved (tracked/ untracked changes/files/folders). This can be done using the Following command:
+                        git status
+            files/ folders in RED depicts the untracked files/folders which are in the working area. Note that blank folders are not shown in the working area so even if they are untracked they won't be shown as RED untracked files.They won't be shown at all.
+            files/folders in GREEN depicts tracked files or more technically tracked changes.
+            After every change you make in the files/folders the new changes will be untracked which amkes the file/folders untracked otherwise promt will say "nothing to commit, working tree clean".
+        4. Git add - This helps in adding untracked files to the tracked area. This can be done through following command:
+                     git add filename      (for adding a sopecific file or folder)
+                     git add .              (for adding all the untracked files)
+        5. Git commit - This helps to save tracked files/folders in staging area and create a checkpoint. It stages the files to get pushed on next push command. This can be done by following command:
+                        git commit -m "Commit message"   OR   git commit -a -m "Commit message"     (for saving all files in staging area)
+                        git commit file1 file2  -m "commit message"                                 (for saving specific files in staging area)  
+        6. Reflecting the checkpoints/ saved changes on github -It sends the staged files/folders to github repository. This helps in syncing local directory to its corresponding repository on github (Github repo may or maynot have the same name as local folder) and saving all the commits by pushing them in master branch or separate branch. This can be done through following command:
+                                                                 git remote add origin URLofTheGithubRepo          (for syncing local folder to github repo or telling where to upload staged files or defining which URL/repo will be refered by origin)
+                                                                 git push -u origin BranchName                     (for saving commits in repo)
+        7. Getting up to date - If several comtributors are working on the same repository then in order to be up to date with changes others made in repo, we can use the following command (This should be generally made before pushing):
+                                git pull origin master
+
+(iv) Tracked files/folders can be sent back to untracked stage or working area through following command:
+     git reset                     (It will untrack all the files currently in tracked area)
+(v) A hidden file .gitignore can be used to keep files away from the actions of git commands. For this a file in the localcal folder ".gitignore" should created and name of all the files that should be ignored should be written inside it. 
+    This helps in segregating files/ folders that are needed to be tracked uploaded on github with those that are not. This is easier than selscting particular files through commands.
+    If you want to ignore all files of a specific extension(say html files) the ypu can write following:
+            *.html                       (to ignore all html files in the folder)
+(vi) To download any repository from github to your local system, open the repository on github, click on code and copy the URL of the repository and then use following command:
+     git clone copiedURL
+(vii) Command list for completing steps fromom tracking to uploading on github:
+      git add .
+      git commit -m "message"
+      git remote add origin URLofTheGithubRepo 
+      git pull origin master
+      git push origin master                             (instead of master another branch name can also be used depending on which branch you need to push)
+(viii) To view branches in repo following command can be used:
+       git branch
+       To create new branche in repo following command can be used:
+       git branch BranchName
+       To change branch to other branch in repo following command can be used:
+       git checkout BranchName
+(ix) merging branches to master branch:
+     git checkout master
+     git pull origin master
+     git branch --merged
+     git push origin master
+    (To be updated further)
